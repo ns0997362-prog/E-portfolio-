@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nishanth S | AIML Engineer Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(0,255,255,.15),transparent 25%),
+    radial-gradient(circle at 80% 30%,rgba(140,0,255,.15),transparent 25%),
+    radial-gradient(circle at 50% 80%,rgba(0,180,255,.15),transparent 25%);
+    z-index:-1;
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,.35);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    z-index:1000;
+}
+
+.logo{
+    font-family:'Orbitron',sans-serif;
+    font-size:1.5rem;
+    color:#00ffff;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00ffff;
+}
+
+/* Hero Section */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 10%;
+}
+
+.hero-content h1{
+    font-family:'Orbitron',sans-serif;
+    font-size:4rem;
+    text-transform:uppercase;
+    letter-spacing:3px;
+}
+
+.hero-content h1 span{
+    color:#00ffff;
+}
+
+.hero-content p{
+    margin-top:20px;
+    font-size:1.2rem;
+    color:#c7c7c7;
+}
+
+.glow-btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    border:2px solid #00ffff;
+    color:#00ffff;
+    text-decoration:none;
+    border-radius:40px;
+    transition:.4s;
+    box-shadow:0 0 15px #00ffff;
+}
+
+.glow-btn:hover{
+    background:#00ffff;
+    color:#000;
+    transform:translateY(-5px);
+}
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    font-family:'Orbitron',sans-serif;
+    color:#00ffff;
+    font-size:2.3rem;
+    margin-bottom:40px;
+}
+
+/* Glass Cards */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(15px);
+    padding:25px;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #00ffff55;
+}
+
+.card h3{
+    color:#00ffff;
+    margin-bottom:10px;
+}
+
+/* Skills */
+
+.skill{
+    margin-bottom:20px;
+}
+
+.skill-name{
+    margin-bottom:8px;
+}
+
+.progress{
+    background:#111;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:12px;
+    background:linear-gradient(90deg,#00ffff,#8a2be2);
+}
+
+/* Contact */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    border-top:1px solid rgba(255,255,255,.1);
+    color:#999;
+}
+
+/* Animation */
+
+.fade{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(max-width:768px){
+.hero-content h1{
+font-size:2.5rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">NISHANTH AI</div>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Hi, I'm <span>Nishanth S</span></h1>
+<p>AIML Engineer | AI Enthusiast | Future Innovator</p>
+<a href="#about" class="glow-btn">Explore Portfolio</a>
+</div>
+</section>
+
+<section id="about" class="fade">
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+<p>
+I am a 2nd Semester Artificial Intelligence & Machine Learning student
+passionate about building intelligent systems and solving real-world problems.
+I enjoy exploring Machine Learning, Data Science, Python development,
+and emerging AI technologies.
+</p>
+</div>
+</section>
+
+<section id="skills" class="fade">
+<h2 class="section-title">Skills</h2>
+
+<div class="card">
+
+<div class="skill">
+<div class="skill-name">Python</div>
+<div class="progress">
+<div class="progress-bar" style="width:80%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Machine Learning</div>
+<div class="progress">
+<div class="progress-bar" style="width:75%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Data Analysis</div>
+<div class="progress">
+<div class="progress-bar" style="width:78%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-name">SQL</div>
+<div class="progress">
+<div class="progress-bar" style="width:72%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Git & GitHub</div>
+<div class="progress">
+<div class="progress-bar" style="width:70%"></div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="projects" class="fade">
+<h2 class="section-title">Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Student Performance Predictor</h3>
+<p>
+ML model that predicts academic performance using data analysis
+and machine learning algorithms.
+</p>
+</div>
+
+<div class="card">
+<h3>AI Chatbot</h3>
+<p>
+Built a conversational chatbot using Python and NLP fundamentals.
+</p>
+</div>
+
+<div class="card">
+<h3>Data Analytics Dashboard</h3>
+<p>
+Interactive dashboard for visualizing datasets and generating insights.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="fade">
+<h2 class="section-title">Contact</h2>
+
+<div class="card contact">
+<p><strong>Name:</strong> Nishanth S</p>
+<p><strong>Role:</strong> AIML Engineer</p>
+<p><strong>Email:</strong> yourmail@gmail.com</p>
+<p><strong>GitHub:</strong> github.com/yourusername</p>
+<p><strong>LinkedIn:</strong> linkedin.com/in/yourprofile</p>
+</div>
+</section>
+
+<footer>
+© 2026 Nishanth S | AI & Machine Learning Portfolio
+</footer>
+
+<script>
+const fades = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+    fades.forEach(item => {
+        const top = item.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            item.classList.add('show');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
